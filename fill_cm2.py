@@ -1,5 +1,26 @@
 #!/usr/bin/env python
 
+##################################################################################################################################################
+#                                                                                                                                                #
+#                   Attention: Specifically for LRZ Linus Cluster, Leibnitz Rechenzentrum, Munich, Germany!                                      #
+#                               This script fills the SLURM queue to its maximum number of 50 jobs.                                              #
+#                                         run in commandline as:                                                                                 #
+#                                             while true; do python3 ~/util/kick/fill_cm2.py; sleep 3600; done                                   #
+#                                         This fills queue after every 60 min till all jobs are submitted!                                       #  
+#                                                                                                                                                #
+#                                               Adjust for other clusters!                                                                       #
+#                                               For SLURM Workload Manager                                                                       #
+#                                               Compares .com and .log files to determine job status! Do not change in folder!                   #
+#                                                                                                                                                #
+#                                                       Version: 1.00                                                                            #
+#                                                                                                                                                #
+#                                               Author:         Fabian L. Zott                                                                   #
+#                                               Last modified:  16.09.2021                                                                       #
+#                                                                                                                                                #
+##################################################################################################################################################
+
+
+
 import os                       #To find all the filenames use os.listdir()
 import glob
 import fileinput
