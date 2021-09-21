@@ -1,4 +1,4 @@
-# LRZ_Linux_CLuster_scripts
+# LRZ_Linux_Cluster_scripts
 
 Here are some useful scripts for the LRZ Linux Cluster (Leibnitz Rechenzentrum, Munich, Germany).
 
