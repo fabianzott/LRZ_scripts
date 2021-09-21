@@ -28,15 +28,15 @@ import subprocess
 
 cwd = str(os.getcwd())                #get current working directory "cwd"
 
-################Charge and Spin Multiplicity#############
+################################################################################
 print("\n" * 4)
 print("-----------------------------------------------")
-print("------------Hello, Beautiful!!-----------------")
+print("------------Hello, beautiful!!-----------------")
 print("-----------------------------------------------")
 print("\n" * 4)
-################Get Informationo about the status of the Queue##################
+################Get Information regarding status of queue##################################
 
-calc_on_queue = 'squeue --clusters="cm2_tiny" --users="di67tez" -o "%.18i %.9P %.30j %.8u %.2t %.10M %.6D %R" | grep di67tez | wc -l'
+calc_on_queue = 'squeue --clusters="clustername" --users="username" -o "%.18i %.9P %.30j %.8u %.2t %.10M %.6D %R" | grep username | wc -l'
 
 calc_count = int(subprocess.getoutput(calc_on_queue))
 
@@ -46,7 +46,7 @@ print("Number of calculations in queuing system:", calc_count)
 print("Number of calculations that can be submitted:", to_sub_count)
 print("\n" * 2)
 
-names_on_queue = 'squeue --clusters="cm2_tiny" --users="di67tez" -o  "%50j" --noheader'
+names_on_queue = 'squeue --clusters="clustername" --users="username" -o  "%50j" --noheader'
 on_queue = str(subprocess.getoutput(names_on_queue))
 list_of_jobs =[]
 for line in on_queue.splitlines():
@@ -63,7 +63,6 @@ directory = os.fsencode(cwd)
 if to_sub_count == 0:
     print("Queue is full!!!!")
 else:
-
     for file in os.listdir(directory):
         filename = os.fsdecode(file)
         if filename.endswith(".com"):
