@@ -3,7 +3,7 @@
 
 ##################################################################################################################################################
 #                                                                                                                                                #
-#       This skript generates a .com input file (opt + freq) for Gaussian 09 and 16 from .xyz files exported from Maestro, Schrödinger           #
+#       This script generates a .com input file (opt + freq) for Gaussian 09 and 16 from .xyz files exported from Maestro, Schrödinger           #
 #                                                           after conformer search!                                                              #
 #                                                                                                                                                #
 #                                               Cluster: Linux Cluster, Leibnitz Rechenzentrum (LRZ), Munich, Germany                            #
